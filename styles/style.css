@@ -1,0 +1,23 @@
+*{
+  margin: 0;
+  padding : 0;
+  box-sizing: border-box;
+}
+.font-raleway{
+  font-family: "Raleway", sans-serif;
+}
+.font-inter{
+  font-family: "Inter", sans-serif;
+}
+#new-coupon-left{
+  border-radius: 24px 0px 0px 24px;
+}
+#new-coupon-right{
+  border-radius: 0px 24px 24px 0px;
+}
+#couple-coupon-left{
+  border-radius: 24px 0px 0px 24px;
+}
+#couple-coupon-right{
+  border-radius: 0px 24px 24px 0px;
+}
