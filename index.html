@@ -138,7 +138,7 @@
 
             <div class="flex bg-[#1DD10026] h-10 justify-center items-center p-4 rounded-xl">
               <img src="images/seat-green.png" alt="">
-              <p class=" text-[#1DD100] font-inter font-medium text-lg"><span>40</span>Seats left</p>
+              <p class=" text-[#1DD100] font-inter font-medium text-lg"><span id="available-seat" class="text-3xl font-bold">12</span>Seats left</p>
             </div>
           </div>
           
@@ -243,8 +243,8 @@
         <hr>
         <!--ticket section-->
         <div class="rounded xl bg-[#0307120D] p-8 space-y-4">
-          <div class="flex justify-between">
-            <p><sup id="seat-booked" class="text-2xl font-bold text-green-500"></sup>Seat</p>
+          <div class="flex justify-between text-xl font-semibold">
+            <p>Seat<span id="seat-booked" class="text-3xl font-bold bg-green-500 text-white px-2">0</span></p>
             <p>Class</p>
             <p>Price</p>
           </div>
@@ -259,13 +259,14 @@
             <p>Total Price</p>
             <p>BDT <span id="total-price">0</span></p>
           </div>
-          <div class="flex w-full">
-            <input type="text" placeholder="Have any Coupon?" class="p-4">
-            <button class="text-white p-4 bg-green-500 rounded-xl">Apply</button>
+          <div id="coupon-div" class="flex w-full">
+            <input type="text" placeholder="Have any Coupon?" class="p-4" id="coupon-field">
+            <button ID="apply-btn" class="text-white p-4 bg-green-500 rounded-xl">Apply</button>
           </div>
           <div class="flex justify-between">
+            
             <p>Grand Total</p>
-            <p>BDT 1100</p>
+            <p>BDT <span id="grand-total">0</span></p>
           </div>
         </div>
         <!--form section-->
