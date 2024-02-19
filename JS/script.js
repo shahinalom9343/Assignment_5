@@ -12,14 +12,25 @@ for(let i=0;i<buttonString.length;i++){
     // console.log(button);
     // button background design
     buttonSingle.classList.add("bg-green-500");
-
-    // ticket section calculation
-    const ticketAreaContainer = document.getElementById("ticket-Area-Container");
-    const p = document.createElement("p");
+    // buttonSingle.classList.add("disabled:")
     const amountString = document.getElementById("amount").innerText;
     const cost = parseInt(amountString);
-    p.innerText = button + "-------------economy---------------" + cost;
-    ticketAreaContainer.appendChild(p);
+
+    // ticket section calculation
+    const seatName = document.getElementById("seat-name");
+    const p1 = document.createElement("p");
+    p1.innerText = button;
+    seatName.appendChild(p1);
+
+    const seatClass = document.getElementById("seat-class");
+    const p2 = document.createElement("p");
+    p2.innerText = "Economy";
+    seatClass.appendChild(p2);
+    
+    const seatPrice = document.getElementById("seat-price");
+    const p3 = document.createElement("p");
+    p3.innerText = cost;
+    seatPrice.appendChild(p3);
 
     // total amount calculation
     totalAmount = totalAmount + cost;
@@ -35,7 +46,7 @@ for(let i=0;i<buttonString.length;i++){
     if(bookedSeat > 4){
       alert("Ticket limit have been exceeded !!!");
       buttonSingle.classList.remove("bg-green-500");
-      // buttonSingle.classList.add("disabled");
+      buttonSingle.removeAttribute('disable',true);
     }
 
     // cuurent available seat calculation
@@ -43,10 +54,10 @@ for(let i=0;i<buttonString.length;i++){
     seatRemaining = seatRemaining - 1;
     availableSeat.innerText =seatRemaining;
 
+      // grand total calculation
+    const grandTotalAmount = document.getElementById("grand-total");
+    grandTotalAmount.innerText = totalAmount;
 
-
-
-    // grand total calculation
     const btn = document.getElementById("apply-btn");
     btn.addEventListener('click', function(){
     // coupon section
