@@ -59,6 +59,7 @@ for(let i=0;i<buttonString.length;i++){
     grandTotalAmount.innerText = totalAmount;
 
     const btn = document.getElementById("apply-btn");
+    // btn.setAttribute('disable',true);
     btn.addEventListener('click', function(){
     // coupon section
     const couponElement = document.getElementById("coupon-field");
